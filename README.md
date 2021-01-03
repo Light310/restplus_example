@@ -1,7 +1,6 @@
-restplus_example
+### RESTPlus example
 
-=============
-# FILE TREE
+##### FILE TREE
 ```
 ├── api                           #
 │   ├── some_service              #  API directory for this service
@@ -19,14 +18,17 @@ restplus_example
 ├── db.sqlite                     #
 └── settings.py                   #  Global app settings
 ```
-=============
-# ENTITIES DESCRIPTION
+
+##### ENTITIES DESCRIPTION
+```
 some_entity is a main entity with foreign key to another_entity
 another_entity is a key-value dictionary
 third_entity is just a random entity with 3 fields (and different type of update methods)
 it is definetely not good and should only be used with a client
-=============
-# ADDING A NEW ENTITY
+```
+
+##### ADDING A NEW ENTITY
+```
 To add a new entity, create a folder in api folder
 Inside it :
 endpoints folder represents endpoints for each entity
@@ -41,9 +43,10 @@ from api.some_service.endpoints.some_entity import ns as some_entity_namespace
 
 initialize_app :
 api.add_namespace(some_entity_namespace)
+```
 
-=============
-# INSTALLATION
+##### INSTALLATION
+```
 python3 -m venv env
 source env/bin/activate
 python3 -m pip install -r restplus_example/requirements.txt
@@ -52,3 +55,4 @@ To start run this in activated virtual environment :
 python restplus_example/restplus_example/app.py
 
 To recreate a database after model change run script database/run_reset_database.py
+```
