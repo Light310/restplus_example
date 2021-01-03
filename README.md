@@ -51,6 +51,7 @@ python3 -m venv env
 source env/bin/activate
 python3 -m pip install -r restplus_example/requirements.txt
 
+in settings.py change FLASK_SERVER_NAME ip to ip of your remote server
 To start run this in activated virtual environment : 
 python restplus_example/restplus_example/app.py
 
